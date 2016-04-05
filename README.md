@@ -34,16 +34,24 @@ How to use it:<br>
 
 This mean that tag "optional-script" will be replaced by tag "script" with "src" attribute set to "js/script.js" for environment "dev". For all other environments this tag will be removed.
 
-5.Run for example for atribute dev will be:
-cordova build android --dev
+5.Configure which files to filter:
 
+config/fileReplaceConfig.json
+
+ ex.:
+ [
+   "platforms/android/assets/www/index.html"
+ ]
+
+6.Run for example for atribute dev will be:
+cordova build android --dev
 
 +for prod:
 cordova build android --prod
 
 which removes tag
 
-6.Use well
+7.Use well
 
 
 
