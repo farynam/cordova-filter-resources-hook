@@ -10,7 +10,11 @@ How to use it:<br>
 +fs<br>
 +util<br>
 +path<br>
-3.Put reference to script in config.xml ex:<br>
+3.Add platform to your cordova app ex.<br>
+
+    cordova platform add android<br>
+
+4.Put reference to script in config.xml ex:<br>
 
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
@@ -23,7 +27,7 @@ How to use it:<br>
     ......
 </widget>
 
-4.Put your custom tags for ex. www/index.html
+5.Put your custom tags for ex. www/index.html
 
 <html>
         .......
@@ -34,7 +38,7 @@ How to use it:<br>
 
 This mean that tag "optional-script" will be replaced by tag "script" with "src" attribute set to "js/script.js" for environment "dev". For all other environments this tag will be removed.
 
-5.Configure which files to filter:
+6.Configure which files to filter:
 
 config/fileReplaceConfig.json
 
@@ -43,7 +47,7 @@ config/fileReplaceConfig.json
    "platforms/android/assets/www/index.html"
  ]
 
-6.Run for example for atribute dev will be:
+7.Run for example for atribute dev will be:
 cordova build android --dev
 
 +for prod:
@@ -51,7 +55,7 @@ cordova build android --prod
 
 which removes tag
 
-7.Use well
+8.Use well
 
 
 
