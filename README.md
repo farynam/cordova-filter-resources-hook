@@ -23,7 +23,7 @@ How to use it:<br>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
     ......
-    <hook type="after_build" src="scripts/filterResource.js" />
+    <hook type="after_prepare" src="scripts/filterResource.js" />
     ......
 </widget>
 
@@ -55,18 +55,6 @@ for prod:
 
 which removes tag
 
-8.Because cordova overwrites files after hook if it is run like ex.:
-    cordova run browser --dev
-
-It may be desirable to prepare scripts for starting.:
-    #!/bin/bash
-    cordova run browser &
-    sleep 5
-    cordova build browser --dev
-
-And stopping built in server:
-    #!/bin/bash
-    kill -n 9 $(pgrep node)
 
 
 
