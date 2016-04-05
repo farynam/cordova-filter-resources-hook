@@ -2,15 +2,15 @@
 This script is for attaching some resources conditionally, depending on environment ex. dev, prod etc. 
 
 
-How to use it:
-1.Clone from git
-2.Copy to ex. <YOUR_CORDOVA_PROJECT>/scripts
-3.Make sure you have this node modules installed:
-+cheerio
-+fs
-+util
-+path
-3.Put reference to script in config.xml ex:
+How to use it:<br>
+1.Clone from git<br>
+2.Copy to ex. <YOUR_CORDOVA_PROJECT>/scripts<br>
+3.Make sure you have this node modules installed:<br>
++cheerio<br>
++fs<br>
++util<br>
++path<br>
+3.Put reference to script in config.xml ex:<br>
 
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
