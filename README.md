@@ -48,14 +48,28 @@ config/fileReplaceConfig.json
  ]
 
 7.Run for example for atribute dev will be:
-cordova build android --dev
+    cordova build android --dev
 
-+for prod:
-cordova build android --prod
+for prod:
+    cordova build android --prod
 
 which removes tag
 
-8.Use well
+8.Because cordova overwrites files after hook if it is run like ex.:
+    cordova run browser --dev
+
+It may be desirable to prepare scripts for starting.:
+    #!/bin/bash
+    cordova run browser &
+    sleep 5
+    cordova build browser --dev
+
+And stopping built in server:
+    #!/bin/bash
+    kill -n 9 $(pgrep node)
+
+
+
 
 
 
