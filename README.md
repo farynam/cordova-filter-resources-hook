@@ -6,10 +6,10 @@ How to use it:<br>
 1.Clone from git<br>
 2.Copy to ex. <YOUR_CORDOVA_PROJECT>/scripts<br>
 3.Make sure you have this node modules installed:<br>
-+cheerio<br>
-+fs<br>
-+util<br>
-+path<br>
+    +cheerio 0.20.0<br>
+    +fs<br>
+    +util<br>
+    +path<br>
 3.Add platform to your cordova app ex.<br>
 
     cordova platform add android<br>
@@ -17,7 +17,8 @@ How to use it:<br>
 4.Put reference to script in config.xml ex:<br>
 
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>HelloCordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -31,12 +32,12 @@ How to use it:<br>
 
 <html>
         .......
-        <optional-script script-src="c"  env="dev"></optional-script>
-        
+        <optional-script script-src="js/script.js"  env="dev"></optional-script>
         ........
 </html>
 
-This mean that tag "optional-script" will be replaced by tag "script" with "src" attribute set to "js/script.js" for environment "dev". For all other environments this tag will be removed.
+    This mean that tag "optional-script" will be replaced by tag "script" with "src" attribute set to "js/script.js"
+    for environment "dev". For all other environments this tag will be removed.
 
 6.Configure which files to filter:
 
